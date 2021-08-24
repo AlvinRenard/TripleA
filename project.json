@@ -1,7 +1,7 @@
 {
   "name": "SentimentAnalysis",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "Indosat_RPA_Flowchart.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",
     "UiPath.Mail.Activities": "[1.10.5]",
@@ -46,6 +46,12 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "40be2f22-01c6-4614-bbcd-097b6f58f46e",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Indosat_RPA_Flowchart.xaml",
+      "uniqueId": "a22cbf22-7747-4c1f-8da7-eab38a0158de",
       "input": [],
       "output": []
     }
