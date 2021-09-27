@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>785.6,2122.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>761,2105</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>createfiledate_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -80,7 +80,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="createfiledate" sap:VirtualizedContainerService.HintSize="767.2,1957.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="createfiledate" sap:VirtualizedContainerService.HintSize="771,1940" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="listCol" />
       <Variable x:TypeArguments="s:String[]" Name="listSheet" />
@@ -98,7 +98,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="725.6,255.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="729,253" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -152,16 +152,16 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:PathExists DisplayName="Path Exists" Exists="[FolderExist]" sap:VirtualizedContainerService.HintSize="725.6,90.4" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[path+FolderName]" PathType="Folder" />
-    <If Condition="[FolderExist]" sap:VirtualizedContainerService.HintSize="725.6,240" sap2010:WorkflowViewState.IdRef="If_2">
+    <ui:PathExists DisplayName="Path Exists" Exists="[FolderExist]" sap:VirtualizedContainerService.HintSize="729,89" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[path+FolderName]" PathType="Folder" />
+    <If Condition="[FolderExist]" sap:VirtualizedContainerService.HintSize="729,237" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[FolderName+&quot; &quot;+&quot;sudah ada!&quot;]" />
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[FolderName+&quot; &quot;+&quot;sudah ada!&quot;]" />
       </If.Then>
       <If.Else>
-        <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[path+FolderName]" />
+        <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[path+FolderName]" />
       </If.Else>
     </If>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="725.6,130.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="729,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
@@ -177,31 +177,31 @@
               <OutArgument x:TypeArguments="x:String">[out_PathLocation]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[path+FileName+tanggal+ext]</InArgument>
+              <InArgument x:TypeArguments="x:String">[path+FileName+ext]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:PathExists DisplayName="Path Exists" Exists="[filegenerate]" sap:VirtualizedContainerService.HintSize="725.6,90.4" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[out_PathLocation]" PathType="File" />
-    <If Condition="[filegenerate = True]" sap:VirtualizedContainerService.HintSize="725.6,858.4" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:PathExists DisplayName="Path Exists" Exists="[filegenerate]" sap:VirtualizedContainerService.HintSize="729,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[out_PathLocation]" PathType="File" />
+    <If Condition="[filegenerate = True]" sap:VirtualizedContainerService.HintSize="729,851" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[out_PathLocation+&quot; &quot;+&quot;sudah ada&quot;]" />
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[out_PathLocation+&quot; &quot;+&quot;sudah ada&quot;]" />
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="452,699.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence sap:VirtualizedContainerService.HintSize="454,693" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="410.4,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[out_PathLocation]">
+          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="412,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[out_PathLocation]">
             <ui:ExcelApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -218,7 +218,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ExcelApplicationScope>
-          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="410.4,130.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="412,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
@@ -254,7 +254,9 @@
 "Url TOEIC File",
 "Upload Date TOEIC",
 "Status TOEIC",
-"Document Status"
+"Document Status",
+"Summary",
+"Request Code"
 }]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
@@ -263,25 +265,25 @@
                     <OutArgument x:TypeArguments="s:String[]">[listSheet]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="s:String[]">[{"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","AA","AB","AC"}]</InArgument>
+                    <InArgument x:TypeArguments="s:String[]">[{"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","AA","AB","AC","AD","AE"}]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
-          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="410.4,343.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Enumerable.Range(0,listCol.Length)]">
+          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412,341" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Enumerable.Range(0,listCol.Length)]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,208.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,207" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:WriteCell Cell="[listSheet(Convert.ToInt32(item))+&quot;1&quot;]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Sheet1" Text="[listCol(Convert.ToInt32(item))]" WorkbookPath="[out_PathLocation]" />
+                  <ui:WriteCell Cell="[listSheet(Convert.ToInt32(item))+&quot;1&quot;]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Sheet1" Text="[listCol(Convert.ToInt32(item))]" WorkbookPath="[out_PathLocation]" />
                 </Sequence>
               </ActivityAction>
             </ui:ForEach.Body>
